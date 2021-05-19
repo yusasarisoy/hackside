@@ -14,8 +14,13 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(networkManager.posts) { post in
-                Text(String(post.points))
-                Text(post.title)
+                NavigationLink(destination: DetailView(url: post.url)) {
+                    Text(String(post.points))
+                        .foregroundColor(Color("Pumpkin"))
+                        .fontWeight(.bold)
+                    Text(post.title)
+                        .fontWeight(.medium)
+                }
             }
             .navigationBarTitle("Hackside")
         }
