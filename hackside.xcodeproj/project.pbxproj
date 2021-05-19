@@ -28,6 +28,7 @@
 		446C9FC62655392900C09621 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		446C9FC92655490D00C09621 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		446C9FCB26554C4100C09621 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		446C9FCD26554FC300C09621 /* Hackside.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hackside.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +61,13 @@
 		443E901D26372FAE00D7C5FC /* hackside */ = {
 			isa = PBXGroup;
 			children = (
-				446C9FC32655382A00C09621 /* Models */,
-				443E901E26372FAE00D7C5FC /* hacksideApp.swift */,
-				446C9FC8265548F100C09621 /* Views */,
-				443E902226372FAF00D7C5FC /* Assets.xcassets */,
+				446C9FCD26554FC300C09621 /* Hackside.entitlements */,
 				443E902726372FAF00D7C5FC /* Info.plist */,
+				443E901E26372FAE00D7C5FC /* hacksideApp.swift */,
+				443E902226372FAF00D7C5FC /* Assets.xcassets */,
+				446C9FC32655382A00C09621 /* Models */,
 				443E902426372FAF00D7C5FC /* Preview Content */,
+				446C9FC8265548F100C09621 /* Views */,
 			);
 			path = hackside;
 			sourceTree = "<group>";
@@ -299,6 +301,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = hackside/Hackside.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"hackside/Preview Content\"";
 				DEVELOPMENT_TEAM = JW7J4HUPGZ;
@@ -311,6 +314,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.icloud.yusasarisoy.hackside;
 				PRODUCT_NAME = Hackside;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -321,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = hackside/Hackside.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"hackside/Preview Content\"";
 				DEVELOPMENT_TEAM = JW7J4HUPGZ;
@@ -333,6 +338,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.icloud.yusasarisoy.hackside;
 				PRODUCT_NAME = Hackside;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
