@@ -11,6 +11,8 @@
 		443E902126372FAE00D7C5FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443E902026372FAE00D7C5FC /* ContentView.swift */; };
 		443E902326372FAF00D7C5FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443E902226372FAF00D7C5FC /* Assets.xcassets */; };
 		443E902626372FAF00D7C5FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443E902526372FAF00D7C5FC /* Preview Assets.xcassets */; };
+		446C9FC52655384000C09621 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C9FC42655384000C09621 /* NetworkManager.swift */; };
+		446C9FC72655392900C09621 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C9FC62655392900C09621 /* PostData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		443E902226372FAF00D7C5FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		443E902526372FAF00D7C5FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		443E902726372FAF00D7C5FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		446C9FC42655384000C09621 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		446C9FC62655392900C09621 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 		443E901D26372FAE00D7C5FC /* hackside */ = {
 			isa = PBXGroup;
 			children = (
+				446C9FC32655382A00C09621 /* Models */,
 				443E901E26372FAE00D7C5FC /* hacksideApp.swift */,
 				443E902026372FAE00D7C5FC /* ContentView.swift */,
 				443E902226372FAF00D7C5FC /* Assets.xcassets */,
@@ -67,6 +72,15 @@
 				443E902526372FAF00D7C5FC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		446C9FC32655382A00C09621 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				446C9FC42655384000C09621 /* NetworkManager.swift */,
+				446C9FC62655392900C09621 /* PostData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				446C9FC52655384000C09621 /* NetworkManager.swift in Sources */,
+				446C9FC72655392900C09621 /* PostData.swift in Sources */,
 				443E902126372FAE00D7C5FC /* ContentView.swift in Sources */,
 				443E901F26372FAE00D7C5FC /* hacksideApp.swift in Sources */,
 			);
