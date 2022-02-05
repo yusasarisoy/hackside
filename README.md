@@ -12,7 +12,7 @@
 
 </br>
 
-💻 Hackside is an iOS application that provides to read news from HackerNews (https://news.ycombinator.com). It has been developed with SwiftUI.
+💻 Hackside is an iOS app that provides to read news from HackerNews (https://news.ycombinator.com). It has been developed with SwiftUI.
 
 </br>
 
