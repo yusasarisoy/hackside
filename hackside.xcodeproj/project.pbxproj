@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		446C9FC72655392900C09621 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C9FC62655392900C09621 /* PostData.swift */; };
 		446C9FCA2655490D00C09621 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C9FC92655490D00C09621 /* DetailView.swift */; };
 		446C9FCC26554C4100C09621 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C9FCB26554C4100C09621 /* WebView.swift */; };
+		448C4C822A88400F009A8F77 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448C4C812A88400F009A8F77 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		446C9FC92655490D00C09621 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		446C9FCB26554C4100C09621 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		446C9FCD26554FC300C09621 /* Hackside.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hackside.entitlements; sourceTree = "<group>"; };
+		448C4C812A88400F009A8F77 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				443E902726372FAF00D7C5FC /* Info.plist */,
 				443E901E26372FAE00D7C5FC /* hacksideApp.swift */,
 				443E902226372FAF00D7C5FC /* Assets.xcassets */,
+				448C4C802A884007009A8F77 /* Extensions */,
 				446C9FC32655382A00C09621 /* Models */,
 				443E902426372FAF00D7C5FC /* Preview Content */,
 				446C9FC8265548F100C09621 /* Views */,
@@ -99,6 +102,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		448C4C802A884007009A8F77 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				448C4C812A88400F009A8F77 /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,8 +136,9 @@
 		443E901326372FAE00D7C5FC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					443E901A26372FAE00D7C5FC = {
 						CreatedOnToolsVersion = 12.4;
@@ -172,6 +184,7 @@
 				446C9FC72655392900C09621 /* PostData.swift in Sources */,
 				443E902126372FAE00D7C5FC /* ContentView.swift in Sources */,
 				446C9FCC26554C4100C09621 /* WebView.swift in Sources */,
+				448C4C822A88400F009A8F77 /* String.swift in Sources */,
 				446C9FCA2655490D00C09621 /* DetailView.swift in Sources */,
 				443E901F26372FAE00D7C5FC /* hacksideApp.swift in Sources */,
 			);
@@ -231,7 +244,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -286,7 +299,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -307,16 +320,18 @@
 				DEVELOPMENT_TEAM = JW7J4HUPGZ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = hackside/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.icloud.yusasarisoy.hackside;
 				PRODUCT_NAME = Hackside;
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -331,16 +346,18 @@
 				DEVELOPMENT_TEAM = JW7J4HUPGZ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = hackside/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.icloud.yusasarisoy.hackside;
 				PRODUCT_NAME = Hackside;
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

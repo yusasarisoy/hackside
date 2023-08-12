@@ -1,37 +1,22 @@
-//
-//  NetworkManager.swift
-//  hackside
-//
-//  Created by Yuşa on 19.05.2021.
-//
-
+import Combine
 import Foundation
 
-class NetworkManager: ObservableObject {
-    
-    @Published var posts = [Post]()
-    
-    func fetchData() {
-        if let url = URL(string: "http://hn.algolia.com/api/v1/search?tags=front_page") {
-            let session = URLSession(configuration: .default)
-            let task = session.dataTask(with: url) { data, resposnse, error in
-                if let error = error {
-                    print("An error occurred while starting URL session:", error.localizedDescription)
-                } else {
-                    let decoder = JSONDecoder()
-                    if let safeData = data {
-                        do {
-                            let results = try decoder.decode(Results.self, from: safeData)
-                            DispatchQueue.main.async {
-                                self.posts = results.hits
-                            }
-                        } catch {
-                            print("An error occurred while decoding the data:", error.localizedDescription)
-                        }
-                    }
-                }
-            }
-            task.resume()
-        }
+@MainActor
+final class NetworkManager: ObservableObject {
+  
+  private enum URLConstants {
+    static let url = "http://hn.algolia.com/api/v1/search?tags=front_page"
+  }
+  
+  @Published var posts = [Post]()
+
+  func fetchData() async throws {
+    guard let url = URL(string: URLConstants.url) else { return }
+    let (data, response) = try await URLSession.shared.data(from: url)
+    guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+      throw "The server responded with an error."
     }
+    guard let results = try? JSONDecoder().decode(Results.self, from: data) else { return }
+    posts = results.hits ?? []
+  }
 }
